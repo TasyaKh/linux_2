@@ -6,32 +6,65 @@
 |_| |_| |_|\___|
                 
 ```
-**Package:** mc  
-**Version:** 3:4.8.26-1.1  
-**Priority:** optional  
-**Section:** universe/utils  
-**Origin:** Ubuntu  
-**Maintainer:** Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>  
-**Original-Maintainer:** Dmitry Smirnov <onlyjob@debian.org>  
-**Bugs:** https://bugs.launchpad.net/ubuntu/+filebug  
-**Installed-Size:** 1 573 kB  
-**Provides:** mcedit  
-**Depends:** libc6 (>= 2.33), libext2fs2 (>= 1.37), libglib2.0-0 (>= 2.59.2), libgpm2 (>= 1.20.7), libslang2 (>= 2.2.4), libssh2-1 (>= 1.2.8), mc-data (= 3:4.8.26-1.1)  
-**Recommends:** mime-support, perl, unzip, sensible-utils  
-**Suggests:** arj, bzip2, catdvi | texlive-binaries, dbview, djvulibre-bin, epub-utils, file, genisoimage, gv, imagemagick, libaspell-dev, links | w3m | lynx, odt2txt, poppler-utils, python, python-boto, python-tz, unar, wimtools, xpdf | pdf-viewer, zip  
-**Homepage:** https://www.midnight-commander.org  
-**Download-Size:** 507 kB  
-**APT-Manual-Installed:** yes  
-**APT-Sources:** http://archive.ubuntu.com/ubuntu impish/universe amd64 Packages  
-**Description:** Midnight Commander - многофункциональный диспетчер файлов  
- GNU Midnight Commander – полноэкранный текстовый файловый менеджер. В нём  
- используется двухпанельный интерфейс и встроенная командная оболочка.  
- Также имеется встроенный редактор с подсветкой синтаксиса и просмотрщик,  
- поддерживающий двоичные файлы. Программа поддерживает виртуальную файловую  
- систему (VFS), что позволяет работать с файлами на удалённых машинах  
- (например, на серверах FTP, SSH) и с файлами внутри архивов, как с  
- обычными файлами.  
-  
+ new Debian package, version 2.0.
+ size 507232 bytes: control archive=3540 bytes.
+     166 байт(а),     8 строк      conffiles            
+    1236 байт(а),    20 строк      control              
+    4581 байт(а),    78 строк      md5sums              
+    1128 байт(а),    23 строк   *  postinst             #!/bin/sh
+     938 байт(а),    29 строк   *  postrm               #!/bin/sh
+     759 байт(а),    12 строк   *  preinst              #!/bin/sh
+     899 байт(а),    21 строк   *  prerm                #!/bin/sh
+ Package: mc
+ Version: 3:4.8.26-1.1
+ Architecture: amd64
+ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ Original-Maintainer: Dmitry Smirnov <onlyjob@debian.org>
+ Installed-Size: 1536
+ Depends: libc6 (>= 2.33), libext2fs2 (>= 1.37), libglib2.0-0 (>= 2.59.2), libgpm2 (>= 1.20.7), libslang2 (>= 2.2.4), libssh2-1 (>= 1.2.8), mc-data (= 3:4.8.26-1.1)
+ Recommends: mime-support, perl, unzip, sensible-utils
+ Suggests: arj, bzip2, catdvi | texlive-binaries, dbview, djvulibre-bin, epub-utils, file, genisoimage, gv, imagemagick, libaspell-dev, links | w3m | lynx, odt2txt, poppler-utils, python, python-boto, python-tz, unar, wimtools, xpdf | pdf-viewer, zip
+ Provides: mcedit
+ Section: utils
+ Priority: optional
+ Homepage: https://www.midnight-commander.org
+ Description: Midnight Commander - a powerful file manager
+  GNU Midnight Commander is a text-mode full-screen file manager. It
+  uses a two panel interface and a subshell for command execution. It
+  includes an internal editor with syntax highlighting and an internal
+  viewer with support for binary files. Also included is Virtual
+  Filesystem (VFS), that allows files on remote systems (e.g. FTP, SSH
+  servers) and files inside archives to be manipulated like real files.
+```
+my_mc
+├── etc
+│   └── mc
+│       ├── edit.indent.rc
+│       ├── filehighlight.ini
+│       ├── mc.default.keymap
+│       ├── mcedit.menu
+│       ├── mc.emacs.keymap
+│       ├── mc.ext
+│       ├── mc.keymap -> mc.default.keymap
+│       ├── mc.menu
+│       └── sfs.ini
+└── usr
+    ├── bin
+    │   ├── mc
+    │   ├── mcdiff -> mc
+    │   ├── mcedit -> mc
+    │   └── mcview -> mc
+    ├── lib
+    │   └── mc
+    └── share
+        ├── applications
+        ├── doc
+        ├── lintian
+        ├── mc
+        └── pixmaps
+
+12 directories, 13 files
+```
 
 ## Файл Preinst
 
